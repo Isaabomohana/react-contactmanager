@@ -10,11 +10,11 @@ class Contact extends Component {
   render() {
     const { name, email, mob } = this.props;
     return (
-      <div>
+      <div className="card card-body mb-3">
         <h4>{name} </h4>
-        <ul>
-          <li>Email: {email}</li>
-          <li>Mobile: {mob}</li>
+        <ul className="list-group">
+          <li className="list-group-item">Email: {email}</li>
+          <li className="list-group-item">Mobile: {mob}</li>
         </ul>
       </div>
     );
