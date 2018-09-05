@@ -5,17 +5,22 @@ const Header = props => {
   const { brandding } = props;
   return (
     <div>
-      <h3>{brandding}</h3>
+      <h3 style={HeaderStyling}>{brandding}</h3>
     </div>
   );
 };
 
 Header.defaultProps = {
-  brandding: "my React App"
+  brandding: "My React App"
 };
 
 Header.propTypes = {
   brandding: PropTypes.string.isRequired
+};
+
+const HeaderStyling = {
+  color: "red",
+  fontSize: "50px"
 };
 
 export default Header;
