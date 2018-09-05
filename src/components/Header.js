@@ -1,9 +1,21 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-export default props => {
+const Header = props => {
+  const { brandding } = props;
   return (
     <div>
-      <h3>{props.brandding}</h3>
+      <h3>{brandding}</h3>
     </div>
   );
 };
+
+Header.defaultProps = {
+  brandding: "my React App"
+};
+
+Header.propTypes = {
+  brandding: PropTypes.string.isRequired
+};
+
+export default Header;
